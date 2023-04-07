@@ -8,13 +8,12 @@ public class MyPanel extends JPanel {
     public Dimension getPrefferedSize() {
         return new Dimension(1560,700);
     }
-
     private int x = 100;
     private int y = 100;
     private int width = 50;
     private int height = 100;
     private int step = 30;
-    private int delta = 5;
+    private int delta = 3;
 
     private ArrayList<Rectangle> outList = new ArrayList<Rectangle>();
 
@@ -44,7 +43,6 @@ public class MyPanel extends JPanel {
             x = x + step + width;
         }
     }
-
     private void segment(int number) {
         switch(number) {
             case 1:
@@ -75,5 +73,25 @@ public class MyPanel extends JPanel {
         for(Rectangle rect: outList) {
             g.drawLine(rect.x, rect.y, rect.width, rect.height);
         }
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setStep(int step) {
+        this.step = step;
     }
 }
